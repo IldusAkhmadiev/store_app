@@ -18,7 +18,6 @@ public class EmployeeDAOImpl implements EmployeeDAO{
     private SessionFactory factory;
 
     @Override
-    @Transactional
     public List<Employee> getAllEmployees() {
 
         Session session = factory.getCurrentSession();
