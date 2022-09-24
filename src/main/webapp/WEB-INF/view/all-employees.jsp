@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: Ильдус
@@ -30,8 +31,9 @@
             <td>${field.salary}</td>
         </tr>
         </c:forEach>
-
     </table>
+    <br>
+    <input type="button" value="Add" onclick="window.location.href = 'addEmployee' "/>
 
 
 </body>
