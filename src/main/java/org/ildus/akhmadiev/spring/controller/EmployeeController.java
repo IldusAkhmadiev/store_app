@@ -38,9 +38,15 @@ public class EmployeeController {
     }
 
     @RequestMapping("updateInfo")
-    public String updateEmpployee(@RequestParam("empId") int id,Model model ) {
+    public String updateEmployee(@RequestParam("empId") int id,Model model ) {
         Employee employee = service.getEmployee(id);
         model.addAttribute("employee",employee);
         return "employee-info";
+    }
+
+    @RequestMapping("deleteEmployee")
+    public String deleteEmployee(@RequestParam("empId") int id) {
+        service.deleteEmployee(id);
+        return "redirect:/";
     }
 }
